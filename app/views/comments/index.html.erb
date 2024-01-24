@@ -1,0 +1,85 @@
+
+<style>
+  .center-heading {
+    text-align: center;
+  }
+   
+</style>
+
+<div class="center-heading">
+  <h1  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: dodgerblue; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">Comments</h1>
+</div>
+
+
+
+
+
+
+
+<br/><br/>
+
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+ 
+<h5> Categories: <h5>
+
+
+<div class="tags-container, tag-link, tag-link:hover">
+   
+      <% @tags.each do |tag| %>
+        <%= link_to tag.tag, comments_path(:ta => tag.id) %>
+      <% end %>
+   
+</div>
+
+
+</div>
+
+<br/><br/>
+
+<% if user_signed_in? %>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
+      <th>User Id</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td>
+          <%= comment.first_name %>
+          <%= comment.last_name %></td>
+        <td><%= render comment %></td>
+        <td><%= comment.user_id %></td>
+        <td><button type="button", class="btn btn-outline-primary" %>
+           <%= link_to "Show ", comment %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "New comment", new_comment_path, class:"btn btn-primary" %>
+
+<% else %>
+  <h1>Forum</h1>
+Feel free to leave your comments...
+<% end %>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

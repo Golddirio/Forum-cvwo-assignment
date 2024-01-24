@@ -1,0 +1,28 @@
+
+
+
+
+
+<div style="font-size: 40px; margin-bottom: 10px;", class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+  <%= @comment.comment %>
+  <br/><br/>
+  
+</div>
+<p class="text-end">Category: <%= @comment.tag.tag %>
+</p>
+
+<br> </br>
+
+
+<div>
+  <%= link_to "Edit", edit_comment_path(@comment), class:"btn btn-outline-primary btn-sm"%>
+
+  
+
+  <%= link_to "Back", comments_path, class:"btn btn-outline-primary btn-sm" %>
+<div style="margin-top: 20px;">
+  
+  <%= button_to "Destroy", @comment, method: :delete, class:"btn btn-outline-warning btn-sm" %>
+  
+</div>
+</div>
