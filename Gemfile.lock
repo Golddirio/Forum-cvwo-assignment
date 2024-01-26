@@ -152,8 +152,6 @@ GEM
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pg (1.5.4)
-    pg (1.5.4-x64-mingw-ucrt)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -189,11 +187,6 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    rails_12factor (0.0.2)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (7.1.2)
       actionpack (= 7.1.2)
       activesupport (= 7.1.2)
@@ -274,10 +267,8 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
-  pg (~> 1.5, >= 1.5.4)
   puma (>= 5.0)
   rails (~> 7.1.2)
-  rails_12factor (= 0.0.2)
   ransack
   selenium-webdriver
   simple_form

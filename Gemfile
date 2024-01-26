@@ -19,6 +19,7 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
+gem "sqlite3", "~> 1.4"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -58,11 +59,7 @@ group :development do
 
 end
 
-group :production do
-    gem 'pg', '~> 1.5', '>= 1.5.4'
-    #gem 'rails_12factor', '0.0.2'
-    gem "sqlite3", "~> 1.4"
-end
+
   
 
 
